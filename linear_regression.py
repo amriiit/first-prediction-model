@@ -90,13 +90,7 @@ for i in range(len(x_train)):
     total_error_percent=total_error_percent+error_precentage
 avg_error_percent=total_error_percent/len(x_train)
 print("Percentage of error:",avg_error_percent)
-print("Accuracy:",100-avg_error_percent,"%")    
-
-#making predictions
-# s=float(input("Enter the size of the house:"))
-# house_cost=w_final*s+b_final
-# print("Cost of the house:",house_cost)
-
+print("Accuracy:",100-avg_error_percent,"%") 
 
 plt.scatter(x_train,y_train,label="Training Data")
 x_line=np.linspace(0,5,100)
@@ -107,6 +101,11 @@ plt.ylabel("Cost of the house")
 plt.title("House price prediction")
 plt.legend()
 plt.grid(True)
-plt.show()
+plt.show()  
 
-    
+#making predictions
+s=float(input("Enter the size of the house:"))
+house_cost=w_final*s+b_final
+print("Cost of the house:",house_cost)
+
+ 
